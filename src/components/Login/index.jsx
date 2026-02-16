@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
-import styles from "./styles.module.css";
+import { login as loginService } from "../../services/authService";
+import styles from "../../styles/auth.module.css";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
@@ -16,8 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:8080/api/users/login";
-      const { data: res } = await axios.post(url, data);
+      const res = await loginService(data);
       login(res.data);
       window.location = "/";
     } catch (error) {
@@ -28,9 +27,9 @@ const Login = () => {
   };
 
   return (
-    <div className={styles.login_container}>
-      <div className={styles.login_form_container}>
-        <div className={styles.left}>
+    <div className={styles.auth_container}>
+      <div className={styles.auth_form_container}>
+        <div className={`${styles.form_side} ${styles.form_side_left}`}>
           <form className={styles.form_container} onSubmit={handleSubmit}>
             <h1>Log In to Your Account</h1>
             <input
@@ -57,7 +56,7 @@ const Login = () => {
             </button>
           </form>
         </div>
-        <div className={styles.right}>
+        <div className={`${styles.cta_side} ${styles.cta_side_right}`}>
           <h1>New Here?</h1>
           <Link to="/signup">
             <button type="button" className={styles.white_btn}>

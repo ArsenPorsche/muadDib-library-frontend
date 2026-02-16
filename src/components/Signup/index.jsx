@@ -1,7 +1,8 @@
 import { useState } from "react";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "./styles.module.css";
+import { signup } from "../../services/authService";
+import styles from "../../styles/auth.module.css";
+
 const Signup = () => {
   const [data, setData] = useState({
     firstName: "",
@@ -11,14 +12,15 @@ const Signup = () => {
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:8080/api/users";
-      const { data: res } = await axios.post(url, data);
+      const res = await signup(data);
       navigate("/login");
       console.log(res.message);
     } catch (error) {
@@ -31,10 +33,11 @@ const Signup = () => {
       }
     }
   };
+
   return (
-    <div className={styles.signup_container}>
-      <div className={styles.signup_form_container}>
-        <div className={styles.left}>
+    <div className={styles.auth_container}>
+      <div className={styles.auth_form_container}>
+        <div className={`${styles.cta_side} ${styles.cta_side_left}`}>
           <h1>Welcome Back</h1>
           <Link to="/login">
             <button type="button" className={styles.white_btn}>
@@ -42,7 +45,7 @@ const Signup = () => {
             </button>
           </Link>
         </div>
-        <div className={styles.right}>
+        <div className={`${styles.form_side} ${styles.form_side_right}`}>
           <form className={styles.form_container} onSubmit={handleSubmit}>
             <h1>Create Account</h1>
             <input
@@ -91,4 +94,5 @@ const Signup = () => {
     </div>
   );
 };
+
 export default Signup;

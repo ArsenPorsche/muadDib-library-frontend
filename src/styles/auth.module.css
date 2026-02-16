@@ -1,0 +1,137 @@
+.auth_container {
+	width: 100%;
+	min-height: 100vh;
+	background-color: #e8eaf6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.auth_form_container {
+	width: 900px;
+	height: 520px;
+	display: flex;
+	border-radius: 15px;
+	box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.form_side {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+}
+
+.form_side_left {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.form_side_right {
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.cta_side {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #4B0082;
+}
+
+.cta_side_left {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.cta_side_right {
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.cta_side h1 {
+	margin-top: 0;
+	color: white;
+	font-size: 36px;
+	letter-spacing: 0.5px;
+	align-self: center;
+}
+
+.form_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form_container h1 {
+	font-size: 42px;
+	margin-top: 0;
+	letter-spacing: 0.5px;
+	color: #333;
+}
+
+.input {
+	outline: none;
+	border: 1px solid #ddd;
+	width: 380px;
+	padding: 16px;
+	border-radius: 12px;
+	background-color: #f8fafc;
+	margin: 8px 0;
+	font-size: 15px;
+	transition: border-color 0.3s ease;
+}
+
+.input:focus {
+	border-color: #4B0082;
+}
+
+.error_msg {
+	width: 380px;
+	padding: 12px;
+	margin: 8px 0;
+	font-size: 14px;
+	background-color: #ff6b6b;
+	color: white;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.white_btn,
+.green_btn {
+	border: none;
+	outline: none;
+	padding: 14px 0;
+	border-radius: 25px;
+	width: 200px;
+	font-weight: 600;
+	font-size: 15px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.white_btn {
+	background-color: #f8fafc;
+	color: #4B0082;
+}
+
+.white_btn:hover {
+	background-color: #e0e7ff;
+	transform: translateY(-2px);
+}
+
+.green_btn {
+	background-color: #4B0082;
+	color: white;
+	margin: 12px;
+}
+
+.green_btn:hover {
+	background-color: #6a0dad;
+	transform: translateY(-2px);
+}

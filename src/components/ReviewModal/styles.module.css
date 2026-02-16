@@ -1,0 +1,142 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal_content {
+  background: linear-gradient(135deg, #ffffff, #e8aaf6);
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #4b0082;
+}
+
+.modal_content h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  color: #4b0082;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.review_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review_form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.rating_container {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.star_btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.star_btn:hover {
+  color: #ffca28;
+  transform: scale(1.2);
+}
+
+.star_active {
+  color: #ffca28;
+  text-shadow: 0 0 5px #ffca28;
+}
+
+.comment_textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #4b0082;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  box-sizing: border-box;
+  background-color: #f8fafc;
+  color: #333;
+}
+
+.comment_textarea:focus {
+  outline: none;
+  border-color: #6a0dad;
+  box-shadow: 0 0 5px rgba(106, 13, 173, 0.3);
+}
+
+.modal_buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.submit_btn {
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  border-radius: 25px;
+  width: 120px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #4b0082;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit_btn:hover {
+  background-color: #6a0dad;
+  transform: translateY(-2px);
+}
+
+.cancel_btn {
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  background-color: #f8fafc;
+  border-radius: 25px;
+  width: 120px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #4b0082;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cancel_btn:hover {
+  background-color: #e0e7ff;
+  transform: translateY(-2px);
+}
+
+.error_msg {
+  color: #d32f2f;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 0 10px;
+}
