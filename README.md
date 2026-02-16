@@ -101,4 +101,4 @@ The client expects the backend API running at `http://localhost:8080/api`. This 
 
 ## Related
 
-- [BookShelf API (Backend)](https://github.com/ArsenPorsche/muadDib-library-backend/tree/main/server)
+- [BookShelf API (Backend)](https://github.com/ArsenPorsche/muadDib-library-backend)
