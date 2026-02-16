@@ -98,3 +98,7 @@ App runs on [http://localhost:3000](http://localhost:3000).
 ## Environment
 
 The client expects the backend API running at `http://localhost:8080/api`. This is configured in `src/api/axiosConfig.js`.
+
+## Related
+
+- [BookShelf API (Backend)](https://github.com/ArsenPorsche/muadDib-library-backend/tree/main/server)
